@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFitters | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sources/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">FAST<span>FITTERS</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="shop.html" class="nav-link">Shop</a>
+          <ul class="dropdown">
+            <li><a href="shop.html?category=all">View All</a></li>
+            <li><a href="shop.html?category=vintage">Vintage</a></li>
+            <li><a href="shop.html?category=streetwear">Streetwear</a></li>
+            <li><a href="shop.html?category=jackets">Jackets</a></li>
+            <li><a href="shop.html?category=hoodies">Hoodies &amp; Sweatshirts</a></li>
+            <li><a href="shop.html?category=shirts">Shirts &amp; T-Shirts</a></li>
+            <li><a href="shop.html?category=jeans">Jeans &amp; Trousers</a></li>
+          </ul>
+        </li>
+
+        <li><a href="sell.html" class="nav-link">Sell</a></li>
+
+        <li>
+          <a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Thrift smarter.<br>Dress for less.</h1>
+      <p>Pre-loved clothes from students, for students. Browse, filter and buy, or sell what you no longer wear.</p>
+      <a class="btn" href="shop.html">Shop now</a>
+      <a class="btn secondary" href="sell.html">Sell your clothes</a>
+    </section>
+    <section class="section">
+      <h2>Shop by category</h2>
+      <div class="cat-grid">
+        <a href="shop.html?category=vintage">Vintage</a>
+        <a href="shop.html?category=streetwear">Streetwear</a>
+        <a href="shop.html?category=jackets">Jackets</a>
+        <a href="shop.html?category=hoodies">Hoodies</a>
+        <a href="shop.html?category=shirts">Shirts</a>
+        <a href="shop.html?category=jeans">Jeans</a>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Featured drops</h2>
+      <div class="grid" id="featured"></div>
+    </section>
+    <section class="banner">
+      <h2>Every pre-loved piece keeps one more garment out of landfill.</h2>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>FastFitters: second-hand fashion by students, for students. ICT project, FAST-NUCES Karachi, Fall 2026.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>
