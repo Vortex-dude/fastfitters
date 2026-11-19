@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFitters | Sell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sources/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">FAST<span>FITTERS</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="shop.html" class="nav-link">Shop</a>
+          <ul class="dropdown">
+            <li><a href="shop.html?category=all">View All</a></li>
+            <li><a href="shop.html?category=vintage">Vintage</a></li>
+            <li><a href="shop.html?category=streetwear">Streetwear</a></li>
+            <li><a href="shop.html?category=jackets">Jackets</a></li>
+            <li><a href="shop.html?category=hoodies">Hoodies &amp; Sweatshirts</a></li>
+            <li><a href="shop.html?category=shirts">Shirts &amp; T-Shirts</a></li>
+            <li><a href="shop.html?category=jeans">Jeans &amp; Trousers</a></li>
+          </ul>
+        </li>
+
+        <li><a href="sell.html" class="nav-link">Sell</a></li>
+
+        <li>
+          <a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section narrow">
+      <h1>Sell your clothes</h1>
+      <p>Fill in the details below. This demo checks your entries but does not store the listing.</p>
+      <form id="sellForm" novalidate>
+      <div class="field"><label for="title">Item title</label><input id="title" name="title" type="text" placeholder="e.g. Vintage denim jacket"><small class="error" id="err-title"></small></div>
+      <div class="field"><label for="price">Price (Rs)</label><input id="price" name="price" type="number" placeholder="e.g. 1500"><small class="error" id="err-price"></small></div>
+      <div class="field"><label for="category">Category</label><select id="category" name="category"><option value="">Choose...</option><option value="vintage">Vintage</option><option value="streetwear">Streetwear</option><option value="jackets">Jackets</option><option value="hoodies">Hoodies</option><option value="shirts">Shirts</option><option value="jeans">Jeans</option></select><small class="error" id="err-category"></small></div>
+      <div class="field"><label for="size">Size</label><select id="size" name="size"><option value="">Choose...</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option></select><small class="error" id="err-size"></small></div>
+      <div class="field"><label for="condition">Condition</label><select id="condition" name="condition"><option value="">Choose...</option><option value="Like new">Like new</option><option value="Good">Good</option><option value="Fair">Fair</option></select><small class="error" id="err-condition"></small></div>
+      <div class="field"><label for="image">Image link (optional)</label><input id="image" name="image" type="text" placeholder="https://..."><small class="error" id="err-image"></small></div>
+      <div class="field"><label for="desc">Description</label><textarea id="desc" name="desc" rows="4" placeholder="Fit, flaws, brand, how it was worn"></textarea><small class="error" id="err-desc"></small></div>
+        <button class="btn" type="submit">Submit listing</button>
+      </form>
+      <p class="success" id="sellMsg" hidden>Listing submitted. Thank you for selling on FastFitters!</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>FastFitters: second-hand fashion by students, for students. ICT project, FAST-NUCES Karachi, Fall 2026.</p>
+  </footer>
+
+  <script src="js/sell.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>
